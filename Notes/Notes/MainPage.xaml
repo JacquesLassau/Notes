@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.MainPage">
+    
+    <StackLayout Margin="10,35,10,10">
+
+        <Label Text="Notas"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" />
+
+        <Editor x:Name="txtEditorArquivo"
+                Placeholder="Insira sua anotação"
+                HeightRequest="100"/>
+
+        <Grid>          
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Button Text="Salvar"
+                    Clicked="BotaoSalvar" />
+            
+            <Button Grid.Column="1" Text="Apagar"
+                    Clicked="BotaoApagar" />
+        </Grid>
+
+    </StackLayout>
+    
+</ContentPage>
